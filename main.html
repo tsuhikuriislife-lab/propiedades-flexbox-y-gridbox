@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex & Grid Playground</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Explorador de Flex y Grid</h1>
+
+        <div class="main-controls">
+            <button id="add-box">＋ Agregar Cuadrado</button>
+            <button id="remove-box">－ Quitar Cuadrado</button>
+        </div>
+
+        <div id="preview-area" class="preview">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+
+        <div class="mode-selector">
+            <h3>Modo de Visualización</h3>
+            <button id="set-flex">Activar Flex</button>
+            <button id="set-grid">Activar Grid</button>
+        </div>
+
+        <div id="wrapper-flex" class="controls-grid">
+            <div class="group">
+                <h3>Flex Direction</h3>
+                <button class="btn-flex" data-prop="flexDirection" data-value="row">Row</button>
+                <button class="btn-flex" data-prop="flexDirection" data-value="column">Column</button>
+                <button class="btn-flex" data-prop="flexDirection" data-value="row-reverse">Row reverse</button>
+                <button class="btn-flex" data-prop="flexDirection" data-value="column-reverse">Column reverse</button>
+            </div>
+
+            <div class="group">
+                <h3>Justify Content</h3>
+                <button class="btn-flex" data-prop="justifyContent" data-value="flex-start">Start</button>
+                <button class="btn-flex" data-prop="justifyContent" data-value="center">Center</button>
+                <button class="btn-flex" data-prop="justifyContent" data-value="flex-end">End</button>
+                <button class="btn-flex" data-prop="justifyContent" data-value="space-between">Space Between</button>
+                <button class="btn-flex" data-prop="justifyContent" data-value="space-around">Space Around</button>
+            </div>
+            <div class="group">
+                <h3>Align Items</h3>
+                <button class="btn-flex" data-prop="alignItems" data-value="stretch">Stretch</button>
+                <button class="btn-flex" data-prop="alignItems" data-value="center">Center</button>
+                <button class="btn-flex" data-prop="alignItems" data-value="flex-start">Start</button>
+                <button class="btn-flex" data-prop="alignItems" data-value="flex-end">End</button>
+            </div>
+            <div class="group">
+                <h3>Flex Wrap</h3>
+                <button class="btn-flex" data-prop="flexWrap" data-value="nowrap">No Wrap</button>
+                <button class="btn-flex" data-prop="flexWrap" data-value="wrap">Wrap</button>
+                <button class="btn-flex" data-prop="flexWrap" data-value="wrap-reverse">Wrap Reverse</button>
+            </div>
+            <div class="group">
+    <h3>Align Content</h3>
+    <button class="btn-flex" data-prop="alignContent" data-value="flex-start">Start</button>
+    <button class="btn-flex" data-prop="alignContent" data-value="center">Center</button>
+    <button class="btn-flex" data-prop="alignContent" data-value="flex-end">End</button>
+    <button class="btn-flex" data-prop="alignContent" data-value="space-between">Space Between</button>
+                <button class="btn-flex" data-prop="alignContent" data-value="space-around">Space Around</button>
+    <button class="btn-flex" data-prop="alignContent" data-value="stretch">Stretch</button>
+</div>
+            <div class="group">
+                <h3>Gap (Espaciado)</h3>
+                <button class="btn-grid-gap" data-value="0px">0px</button>
+                <button class="btn-grid-gap" data-value="10px">10px</button>
+                <button class="btn-grid-gap" data-value="30px">30px</button>
+            </div>
+
+        </div>
+
+        <div id="wrapper-grid" class="controls-grid hidden">
+    <div class="group">
+        <h3>Grid Columns</h3>
+        <button class="btn-grid" data-prop="gridTemplateColumns" data-value="repeat(3, 1fr)">3 Columnas</button>
+        <button class="btn-grid" data-prop="gridTemplateColumns" data-value="1fr 2fr">1fr 2fr</button>
+        <button class="btn-grid" data-prop="gridTemplateColumns" data-value="repeat(auto-fit, minmax(100px, 1fr))">Auto Fit</button>
+    </div>
+
+    <div class="group">
+        <h3>Grid Rows</h3>
+        <button class="btn-grid" data-prop="gridTemplateRows" data-value="repeat(2, 1fr)">2 Filas Iguales</button>
+        <button class="btn-grid" data-prop="gridTemplateRows" data-value="100px auto">100px y Auto</button>
+    </div>
+
+    <div class="group">
+        <h3>Gap</h3>
+        <button class="btn-grid" data-prop="gap" data-value="0px">0px</button>
+        <button class="btn-grid" data-prop="gap" data-value="15px">15px</button>
+        <button class="btn-grid" data-prop="gap" data-value="30px">30px</button>
+    </div>
+
+    <div class="group">
+        <h3>Justify Items (H)</h3>
+        <button class="btn-grid" data-prop="justifyItems" data-value="stretch">Stretch</button>
+        <button class="btn-grid" data-prop="justifyItems" data-value="center">Center</button>
+        <button class="btn-grid" data-prop="justifyItems" data-value="start">Start</button>
+        <button class="btn-grid" data-prop="justifyItems" data-value="end">End</button>
+    </div>
+
+    <div class="group">
+        <h3>Align Items (V)</h3>
+        <button class="btn-grid" data-prop="alignItems" data-value="stretch">Stretch</button>
+        <button class="btn-grid" data-prop="alignItems" data-value="center">Center</button>
+        <button class="btn-grid" data-prop="alignItems" data-value="start">Start</button>
+        <button class="btn-grid" data-prop="alignItems" data-value="end">End</button>
+    </div>
+</div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
